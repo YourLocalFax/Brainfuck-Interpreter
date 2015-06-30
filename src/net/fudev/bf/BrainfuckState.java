@@ -65,7 +65,7 @@ public class BrainfuckState
    {
       return output;
    }
-
+   
    /**
     * Sets the current PrintStream for this brainfuck state. It cannot be null.
     * 
@@ -80,23 +80,55 @@ public class BrainfuckState
       }
       this.output = output;
    }
-   
+
+   /**
+    * Interprets the given char[] as brainfuck code, using the default memSize as the size of memory in bytes.
+    * 
+    * @param source
+    *           The source to interpret.
+    * @throws IOException
+    */
    public void interpret(final String source) throws IOException
    {
       interpret(source.toCharArray(), DEFAULT_MEM_SIZE);
    }
-   
+
+   /**
+    * Interprets the given char[] as brainfuck code, using the given memSize as the size of memory in bytes.
+    * 
+    * @param source
+    *           The source to interpret.
+    * @param memSize
+    *           How large, in bytes, to make brainfuck's memory.
+    * @throws IOException
+    */
    public void interpret(final String source, final int memSize) throws IOException
    {
       interpret(source.toCharArray(), memSize);
    }
-   
+
+   /**
+    * Interprets the given char[] as brainfuck code, using the default memSize as the size of memory in bytes.
+    * 
+    * @param source
+    *           The source to interpret.
+    * @throws IOException
+    */
    public void interpret(final char[] source) throws IOException
    {
       interpret(source, DEFAULT_MEM_SIZE);
    }
    
-   private void interpret(final char[] source, final int memSize) throws IOException
+   /**
+    * Interprets the given char[] as brainfuck code, using the given memSize as the size of memory in bytes.
+    * 
+    * @param source
+    *           The source to interpret.
+    * @param memSize
+    *           How large, in bytes, to make brainfuck's memory.
+    * @throws IOException
+    */
+   public void interpret(final char[] source, final int memSize) throws IOException
    {
       final byte[] mem = new byte[memSize];
       final int length = source.length;
