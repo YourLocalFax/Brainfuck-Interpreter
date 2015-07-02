@@ -25,7 +25,7 @@ import java.io.PrintStream;
 /**
  * @author Sekai Kyoretsuna
  */
-public class BrainfuckState
+public class Brainfuck
 {
    /**
     * The default size, in bytes, of brainfuck memory given to each program.
@@ -80,7 +80,7 @@ public class BrainfuckState
       }
       this.output = output;
    }
-
+   
    /**
     * Interprets the given char[] as brainfuck code, using the default memSize as the size of memory in bytes.
     * 
@@ -92,7 +92,7 @@ public class BrainfuckState
    {
       interpret(source.toCharArray(), DEFAULT_MEM_SIZE);
    }
-
+   
    /**
     * Interprets the given char[] as brainfuck code, using the given memSize as the size of memory in bytes.
     * 
@@ -106,7 +106,7 @@ public class BrainfuckState
    {
       interpret(source.toCharArray(), memSize);
    }
-
+   
    /**
     * Interprets the given char[] as brainfuck code, using the default memSize as the size of memory in bytes.
     * 

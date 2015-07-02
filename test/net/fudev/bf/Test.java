@@ -28,7 +28,7 @@ public final class Test
 {
    public static void main(final String[] args) throws IOException
    {
-      final BrainfuckState state = new BrainfuckState();
+      final Brainfuck state = new Brainfuck();
       // A standard HelloWorld app
       state.interpret("++++++++[>++++[>++>+++>+++>+<<<<-]>+>+>->>+[<]<-]>>.>---.+++++++..+++.>>.<-.<.+++.------.--------.>>+.>++.");
       // A more complicated HelloWorld app
